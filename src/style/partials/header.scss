@@ -3,6 +3,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 6.25%;
+  min-height: 50px;
 
   background-color: #000000;
 }
@@ -12,7 +13,7 @@ header {
 
   svg {
     width: 100%;
-    height: 53px;
+    height: 40px;
   }
 }
 
@@ -33,12 +34,14 @@ header {
 }
 
 .menu-button {
-  margin-left: 10px;
   position: relative;
   z-index: 102;
-  background-color: transparent;
+
   width: 40px;
   height: 25px;
+  margin-left: 10px;
+
+  background-color: transparent;
   border: none;
   outline: none;
 }
@@ -126,4 +129,56 @@ $h: 2px;
       opacity: 0;
     }
   }
+}
+
+.main-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 101;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba(37, 35, 58, 0.85);
+  opacity: 0;
+
+  transition: all 0.5s ease-in-out;
+
+  ul,
+  li {
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+  }
+
+  ul {
+    margin-top: 100px;
+
+    text-align: center;
+
+    a {
+      display: block;
+      padding: 20px 0;
+
+      color: $brand-color;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: 500;
+
+      transition: all 0.3s ease-in;
+
+      &:hover,
+      &:active,
+      &:focus {
+        outline: none;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.main-menu.is-active {
+  opacity: 1;
 }
