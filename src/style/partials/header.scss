@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   min-height: 70px;
-  padding: 0 6.25%;
+  padding: 0 $padding;
 
   background-color: #000000;
 
@@ -160,7 +160,6 @@ $h: 2px;
 
   background-color: rgba(37, 35, 58, 0.85);
   opacity: 0;
-
   transition: all 0.5s ease-in-out;
 
   ul,
