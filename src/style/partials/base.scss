@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  font-family: $roboto;
+  font-weight: 300;
+  color: $white;
+}
+
+.wrapper {
+  max-width: 1440px;
+}
