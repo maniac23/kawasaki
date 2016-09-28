@@ -1,0 +1,19 @@
+.btn {
+  display: inline-block;
+  width: 220px;
+  padding: 15px;
+  font-size: 0.85rem;
+  font-family: $fira;
+  font-weight: 400;
+  color: $brand-color;
+  border: 2px solid $brand-color;
+  border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
+
+  &--abs {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+  }
+}

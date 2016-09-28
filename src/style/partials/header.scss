@@ -4,7 +4,7 @@
   align-items: center;
   min-height: 70px;
   padding: 0 $padding;
-
+  width: 100%;
   background-color: #000000;
 
   &__left,
@@ -21,6 +21,7 @@
 
 .logo {
   flex: 0 0 100%;
+  margin-right: 10px;
 
   svg {
     width: 100%;
@@ -215,7 +216,7 @@ $h: 2px;
 // /* Medium Devices, Desktops */
 @media only screen and (min-width: 1026px) {
   .header__left {
-    flex: 0 0 60%;
+    flex: 0 0 55%;
   }
 
   .header-contacts {
