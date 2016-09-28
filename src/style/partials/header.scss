@@ -1,25 +1,36 @@
-header {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-height: 70px;
   padding: 0 6.25%;
-  min-height: 50px;
 
   background-color: #000000;
+
+  &__left,
+  &__right {
+    display: flex;
+    flex: 0 0 45%;
+    align-items: center;
+  }
+
+  &__left {
+    justify-content: flex-start;
+  }
 }
 
 .logo {
-  flex: 0 0 45%;
+  flex: 0 0 100%;
 
   svg {
     width: 100%;
-    height: 40px;
+    height: 30px;
   }
 }
 
 .header-icons {
   display: flex;
-  flex: 0 0 45%;
+  flex: 0 0 100%;
   justify-content: space-between;
   align-items: center;
 
@@ -28,9 +39,13 @@ header {
 
     svg {
       width: 100%;
-      height: 25px;
+      height: 30px;
     }
   }
+}
+
+.header-contacts {
+  display: none;
 }
 
 .menu-button {
@@ -137,6 +152,9 @@ $h: 2px;
   right: 0;
   z-index: 101;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100vw;
   height: 100vh;
 
@@ -154,26 +172,26 @@ $h: 2px;
   }
 
   ul {
-    margin-top: 100px;
-
     text-align: center;
 
     a {
       display: block;
       padding: 20px 0;
 
-      color: $brand-color;
+      font-weight: 300;
+      font-family: $roboto;
+      color: $white;
       text-transform: uppercase;
       text-decoration: none;
-      font-weight: 500;
 
       transition: all 0.3s ease-in;
 
       &:hover,
       &:active,
       &:focus {
+        color: $brand-color;
+
         outline: none;
-        text-decoration: underline;
       }
     }
   }
@@ -181,4 +199,87 @@ $h: 2px;
 
 .main-menu.is-active {
   opacity: 1;
+}
+
+// ********** MEDIA ***********
+
+// /* Small Devices, Tablets */
+@media only screen and (min-width: 640px) {
+  .main-menu {
+    a {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+
+// /* Medium Devices, Desktops */
+@media only screen and (min-width: 1026px) {
+  .header__left {
+    flex: 0 0 60%;
+  }
+
+  .header-contacts {
+    display: flex;
+    flex: 0 0 100%;
+    justify-content: flex-end;
+
+    &__tel {
+      margin-right: 40px;
+
+      font-weight: 700;
+      font-size: 1rem;
+      font-family: $roboto;
+    }
+
+    &__mail {
+      font-weight: 700;
+      font-size: 1rem;
+      font-family: $roboto;
+      color: $brand-color;
+      text-decoration: none;
+
+      transition: all 0.3s ease-in;
+
+      &:hover,
+      &:active {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .header-icons {
+    display: none;
+  }
+
+  .logo {
+    flex: 0 0 30%;
+
+    svg {
+      height: 40px;
+    }
+  }
+
+  .main-menu {
+    position: static;
+
+    display: initial;
+    flex: 0 0 60%;
+    width: auto;
+    height: auto;
+
+    background-color: transparent;
+    opacity: 1;
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+
+      a {
+        display: initial;
+
+        font-size: 1rem;
+      }
+    }
+  }
 }
