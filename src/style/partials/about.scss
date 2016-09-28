@@ -1,0 +1,62 @@
+.about {
+  padding: 70px $padding;
+
+  background-color: $secondary-color;
+  background-image: url("../img/ticket_bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 0;
+
+    font-weight: 700;
+    font-size: 2.143rem;
+    font-family: $fira;
+    text-align: left;
+    color: $brand-color;
+  }
+
+  &__text {
+    font-size: 1.428rem;
+    position: relative;
+    line-height: 1.5;
+    font-weight: 300;
+    margin: 0;
+    padding: 0 0 0 25px;
+    margin-bottom: 40px;
+    text-align: left;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      height: 1rem;
+      width: 2px;
+      background-color: $brand-color;
+      position: absolute;
+      top: 8px;
+      left: 0;
+    }
+
+    strong {
+      font-weight: bold;
+    }
+
+    em {
+      font-weight: 100;
+      font-style: italic;
+    }
+
+    &--italic {
+      font-style: italic;
+      color: darken($brand-color, 15%);
+      text-align: center;
+      padding-left: 0;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
