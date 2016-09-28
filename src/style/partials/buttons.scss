@@ -10,6 +10,13 @@
   border-radius: 5px;
   background-color: transparent;
   cursor: pointer;
+  transition: all 0.3s ease-in;
+
+  &:hover,
+  &:active {
+    color: $white;
+    background-color: darken($brand-color, 25%);
+  }
 
   &--abs {
     position: absolute;
