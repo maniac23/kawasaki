@@ -53,10 +53,25 @@
       color: darken($brand-color, 15%);
       text-align: center;
       padding-left: 0;
+      margin-top: 50px;
 
       &::before {
         display: none;
       }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .about {
+    &__wrap {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__left,
+    &__right {
+      flex: 0 0 45%;
     }
   }
 }
