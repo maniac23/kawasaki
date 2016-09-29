@@ -28,9 +28,14 @@
     margin-bottom: 40px;
     padding: 0 15px;
 
-    img {
+    a {
+      text-transform: none;
+    }
+
+    svg {
       width: 100%;
       max-width: 200px;
+      height: 60px;
     }
   }
 }
