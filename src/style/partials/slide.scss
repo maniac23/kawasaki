@@ -106,23 +106,13 @@
 }
 
 @media only screen and (min-width: 1020px) {
-  .tickets {
-    &__title {
-      font-size: 3rem;
-      margin-bottom: 60px;
-
-      &::after {
-        right: 0;
-      }
-    }
-
-    &__slider {
-      display: flex;
-      justify-content: space-between;
-    }
-  }
-
   .slide {
     flex: 0 0 24%;
+    border: 5px solid transparent;
+    transition: all 0.5s ease-in;
+
+    &:hover {
+      border: 5px solid $brand-color;
+    }
   }
 }
