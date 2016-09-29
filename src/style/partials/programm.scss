@@ -1,9 +1,12 @@
 .programm {
+  position: relative;
+  z-index: 2;
+
   background-color: $secondary-color;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440.09 1440.08'%3E%3Ctitle%3Etik_bg%3C/title%3E%3Cpath d='M841.09,114.82,950,223.76c-72.63,72.62-73.54,192.76,0,266.3a189.13,189.13,0,0,0,266.3,0L1325.27,599,599,1325.26,489.45,1215.71c4.35-3.63,8.63-7.41,12.72-11.49,73.54-73.54,73.54-192.76,0-266.3a188.3,188.3,0,0,0-266.3,0c-4.09,4.09-7.86,8.36-11.49,12.71L114.82,841.09,841.09,114.82M841.09,0A114.47,114.47,0,0,0,759.9,33.63L33.63,759.9a114.82,114.82,0,0,0,0,162.38l109.55,109.55a114.83,114.83,0,0,0,81.18,33.63c1.72,0,3.44,0,5.17-.12a114.78,114.78,0,0,0,83-41.13c1.44-1.72,2.89-3.45,4.51-5.07A73.48,73.48,0,1,1,421,1123c-1.6,1.6-3.33,3.06-5.05,4.49a114.82,114.82,0,0,0-7.66,169.38l109.55,109.55a114.82,114.82,0,0,0,162.38,0l726.27-726.27a114.82,114.82,0,0,0,0-162.38L1297.52,408.87a114.81,114.81,0,0,0-162.38,0,73.49,73.49,0,0,1-103.92-103.92,114.81,114.81,0,0,0,0-162.38L922.28,33.63A114.47,114.47,0,0,0,841.09,0ZM698.51,822.75,837.35,683.88a57.4,57.4,0,1,0-81.18-81.18L617.33,741.57a57.4,57.4,0,1,0,81.18,81.18Z' style='fill:%233ff;opacity:0.05'/%3E%3C/svg%3E");
-  background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom;
+  background-size: cover;
 
   &__left,
   &__right {
@@ -11,34 +14,39 @@
   }
 
   &__right {
+    margin-left: 7%;
+
     background-color: darken($brand-color, 25%);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 390'%3E%3Ctitle%3Emember_bg%3C/title%3E%3Cpath d='M300,312l-52.5,12.88-16,65.13H183.07l20.43-83.26a35.15,35.15,0,0,1,25.89-25.87L300,263.54ZM282.09,37.73a35.29,35.29,0,0,0-58-29.4L127.8,89.58,11.1,42.54A35.25,35.25,0,0,0,0,40.06V174.88l12.2,30.28L0,219.63v73L52.74,230.1a35.25,35.25,0,0,0,5.77-36L19.16,96.54l97.63,39.35a35.24,35.24,0,0,0,35.93-5.78l80.5-67.89-7.29,105.34A35.22,35.22,0,0,0,242.52,200L300,235.7V180.29l-26.62-16.55ZM122.6,319.89a35.25,35.25,0,0,0-32.41-16.57L0,309.55v47.17l86.37-6L110.77,390h55.41Z' style='fill:%233ff;opacity:0.08'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: cover;
     border: 5px solid $brand-color;
     border-right: none;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    margin-left: 7%;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 390'%3E%3Ctitle%3Emember_bg%3C/title%3E%3Cpath d='M300,312l-52.5,12.88-16,65.13H183.07l20.43-83.26a35.15,35.15,0,0,1,25.89-25.87L300,263.54ZM282.09,37.73a35.29,35.29,0,0,0-58-29.4L127.8,89.58,11.1,42.54A35.25,35.25,0,0,0,0,40.06V174.88l12.2,30.28L0,219.63v73L52.74,230.1a35.25,35.25,0,0,0,5.77-36L19.16,96.54l97.63,39.35a35.24,35.24,0,0,0,35.93-5.78l80.5-67.89-7.29,105.34A35.22,35.22,0,0,0,242.52,200L300,235.7V180.29l-26.62-16.55ZM122.6,319.89a35.25,35.25,0,0,0-32.41-16.57L0,309.55v47.17l86.37-6L110.77,390h55.41Z' style='fill:%233ff;opacity:0.08'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-size: cover;
   }
 
   &__title {
-    margin: 0;
-    padding: 0;
-    font-family: $fira;
-    font-size: 2.142rem;
-    color: $brand-color;
     position: relative;
+
+    margin: 0;
     margin-bottom: 10px;
+    padding: 0;
+
+    font-size: 2.142rem;
+    font-family: $fira;
+    color: $brand-color;
 
     &::after {
       content: "";
-      display: block;
-      width: 60px;
-      height: 40px;
       position: absolute;
       top: 13%;
       right: 6%;
+
+      display: block;
+      width: 60px;
+      height: 40px;
+
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 63 38'%3E%3Ctitle%3EProgram%3C/title%3E%3Cpath d='M7 0H3a3 3 0 0 0-3 3v4a3 3 0 0 0 3 3h4a3 3 0 0 0 3-3V3a3 3 0 0 0-3-3zm0 7H3V3h4zm56-4a3 3 0 0 0-3-3H16a3 3 0 0 0-3 3v4a3 3 0 0 0 3 3h44a3 3 0 0 0 3-3zm-3 4H16V3h44zM10 17a3 3 0 0 0-3-3H3a3 3 0 0 0-3 3v4a3 3 0 0 0 3 3h4a3 3 0 0 0 3-3zm-3 4H3v-4h4zm56-4a3 3 0 0 0-3-3H16a3 3 0 0 0-3 3v4a3 3 0 0 0 3 3h44a3 3 0 0 0 3-3zm-3 4H16v-4h44zM10 31a3 3 0 0 0-3-3H3a3 3 0 0 0-3 3v4a3 3 0 0 0 3 3h4a3 3 0 0 0 3-3zm-3 4H3v-4h4zm56-4a3 3 0 0 0-3-3H16a3 3 0 0 0-3 3v4a3 3 0 0 0 3 3h44a3 3 0 0 0 3-3zm-3 4H16v-4h44z' fill='%233ff'/%3E%3C/svg%3E");
       background-repeat: no-repeat;
     }
@@ -49,12 +57,14 @@
 
       &::after {
         content: "";
-        display: block;
-        width: 60px;
-        height: 40px;
         position: absolute;
         top: 13%;
         right: -100%;
+
+        display: block;
+        width: 60px;
+        height: 40px;
+
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40.75 38.97'%3E%3Ctitle%3EMember%3C/title%3E%3Cpath d='M9.61 39a3 3 0 0 1-2.92-3.68l2.44-10.49-8.1-7a3 3 0 0 1 1.72-5.25l10.67-.91 4.19-9.84a3 3 0 0 1 5.52 0l4.19 9.84 10.68.86a3 3 0 0 1 1.72 5.25l-8.1 7L34 35.29a3 3 0 0 1-4.48 3.25L20.37 33l-9.21 5.58a3 3 0 0 1-1.55.42zm10.76-10.21a3 3 0 0 1 1.56.44l7.69 4.66-2-8.73a3 3 0 0 1 1-2.94l6.77-5.89-8.92-.76A3 3 0 0 1 24 13.76l-3.5-8.23-3.5 8.23a3 3 0 0 1-2.51 1.81l-8.92.76 6.77 5.89a3 3 0 0 1 1 2.94l-2 8.73L19 29.23a3 3 0 0 1 1.37-.44zm.52 3.86z' fill='%233ff'/%3E%3C/svg%3E");
         background-repeat: no-repeat;
       }
@@ -62,45 +72,50 @@
   }
 
   &__subtitle {
-    text-align: left;
     margin: 0;
-    padding: 0;
-    color: darken($brand-color, 15%);
-    font-size: 1.42rem;
-    font-weight: 300;
-    padding-left: 30px;
     margin-bottom: 30px;
+    padding: 0;
+    padding-left: 30px;
+
+    font-weight: 300;
+    font-size: 1.42rem;
+    text-align: left;
+    color: darken($brand-color, 15%);
   }
 
   &__list {
     margin: 0;
     padding: 0;
+
     list-style-type: none;
   }
 
   &__item {
+    position: relative;
+
+    margin-bottom: 30px;
     padding-left: 30px;
+
     font-weight: 300;
     font-size: 1.142rem;
     line-height: 1.5;
-    margin-bottom: 30px;
-    position: relative;
 
     &::before {
       content: "";
-      display: inline-block;
-      height: 1rem;
-      width: 2px;
-      background-color: $brand-color;
       position: absolute;
       top: 8px;
       left: 0;
 
+      display: inline-block;
+      width: 2px;
+      height: 1rem;
+
+      background-color: $brand-color;
     }
 
     &--right {
-      padding-left: 0;
       padding-right: 30px;
+      padding-left: 0;
 
       &::before {
         display: none;
@@ -108,13 +123,15 @@
 
       &::after {
         content: "";
-        display: inline-block;
-        height: 1rem;
-        width: 2px;
-        background-color: $brand-color;
         position: absolute;
         top: 8px;
         right: 0;
+
+        display: inline-block;
+        width: 2px;
+        height: 1rem;
+
+        background-color: $brand-color;
       }
     }
   }
@@ -124,6 +141,7 @@
 @media only screen and (min-width: 768px) {
   .programm {
     display: flex;
+
     background-size: contain;
   }
 }

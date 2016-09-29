@@ -1,4 +1,7 @@
 .tickets {
+  position: relative;
+  z-index: 2;
+
   padding: 50px $padding;
 
   background-color: $secondary-color;
@@ -8,6 +11,8 @@
   background-size: cover;
 
   &__title {
+    position: relative;
+
     width: 60%;
     margin: 0;
     margin-bottom: 30px;
@@ -17,7 +22,6 @@
     font-size: 2.142rem;
     font-family: $fira;
     color: $brand-color;
-    position: relative;
 
     &::after {
       content: "";
@@ -28,6 +32,7 @@
       display: block;
       width: 60px;
       height: 40px;
+
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 44'%3E%3Ctitle%3ECards%3C/title%3E%3Cpath d='M45 44H19a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4h26a4 4 0 0 1 4 4v36a4 4 0 0 1-4 4zM19 4v36h26V4zm45 31V9a4 4 0 0 0-4-4h-8v4h8v26h-8v4h8a4 4 0 0 0 4-4zm-52 0H4V9h8V5H4a4 4 0 0 0-4 4v26a4 4 0 0 0 4 4h8z' fill='%233ff'/%3E%3C/svg%3E");
       background-repeat: no-repeat;
       background-position: center;
@@ -39,8 +44,9 @@
 @media only screen and (min-width: 1020px) {
   .tickets {
     &__title {
-      font-size: 3rem;
       margin-bottom: 60px;
+
+      font-size: 3rem;
 
       &::after {
         right: 0;

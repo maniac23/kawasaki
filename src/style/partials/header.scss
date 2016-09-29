@@ -127,7 +127,7 @@ $h: 2px;
     top: 50%;
 
     .sandwich__topper {
-      top: 15%;
+      top: 20%;
 
       transform: rotate(140deg);
     }
@@ -151,9 +151,9 @@ $h: 2px;
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 101;
+  z-index: 1;
 
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 100vw;
@@ -199,6 +199,7 @@ $h: 2px;
 
 .main-menu.is-active {
   opacity: 1;
+  z-index: 3;
 }
 
 // ********** MEDIA ***********

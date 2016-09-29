@@ -1,11 +1,14 @@
 .about {
+  position: relative;
+  z-index: 2;
+
   padding: 70px $padding;
 
   background-color: $secondary-color;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440.09 1440.08'%3E%3Ctitle%3Etik_bg%3C/title%3E%3Cpath d='M841.09,114.82,950,223.76c-72.63,72.62-73.54,192.76,0,266.3a189.13,189.13,0,0,0,266.3,0L1325.27,599,599,1325.26,489.45,1215.71c4.35-3.63,8.63-7.41,12.72-11.49,73.54-73.54,73.54-192.76,0-266.3a188.3,188.3,0,0,0-266.3,0c-4.09,4.09-7.86,8.36-11.49,12.71L114.82,841.09,841.09,114.82M841.09,0A114.47,114.47,0,0,0,759.9,33.63L33.63,759.9a114.82,114.82,0,0,0,0,162.38l109.55,109.55a114.83,114.83,0,0,0,81.18,33.63c1.72,0,3.44,0,5.17-.12a114.78,114.78,0,0,0,83-41.13c1.44-1.72,2.89-3.45,4.51-5.07A73.48,73.48,0,1,1,421,1123c-1.6,1.6-3.33,3.06-5.05,4.49a114.82,114.82,0,0,0-7.66,169.38l109.55,109.55a114.82,114.82,0,0,0,162.38,0l726.27-726.27a114.82,114.82,0,0,0,0-162.38L1297.52,408.87a114.81,114.81,0,0,0-162.38,0,73.49,73.49,0,0,1-103.92-103.92,114.81,114.81,0,0,0,0-162.38L922.28,33.63A114.47,114.47,0,0,0,841.09,0ZM698.51,822.75,837.35,683.88a57.4,57.4,0,1,0-81.18-81.18L617.33,741.57a57.4,57.4,0,1,0,81.18,81.18Z' style='fill:%233ff;opacity:0.05'/%3E%3C/svg%3E");
-  background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom;
+  background-size: cover;
 
   &__title {
     margin: 0;
@@ -20,24 +23,28 @@
   }
 
   &__text {
-    font-size: 1.428rem;
     position: relative;
-    line-height: 1.5;
-    font-weight: 300;
+
     margin: 0;
-    padding: 0 0 0 25px;
     margin-bottom: 40px;
+    padding: 0 0 0 25px;
+
+    font-weight: 300;
+    font-size: 1.428rem;
+    line-height: 1.5;
     text-align: left;
 
     &::before {
       content: "";
-      display: inline-block;
-      height: 1rem;
-      width: 2px;
-      background-color: $brand-color;
       position: absolute;
       top: 8px;
       left: 0;
+
+      display: inline-block;
+      width: 2px;
+      height: 1rem;
+
+      background-color: $brand-color;
     }
 
     strong {
@@ -50,11 +57,12 @@
     }
 
     &--italic {
-      font-style: italic;
-      color: darken($brand-color, 15%);
-      text-align: center;
-      padding-left: 0;
       margin-top: 50px;
+      padding-left: 0;
+
+      text-align: center;
+      color: darken($brand-color, 15%);
+      font-style: italic;
 
       &::before {
         display: none;
