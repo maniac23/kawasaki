@@ -11,5 +11,7 @@ $(document).ready(function() {
   //= partials/slider.js
   //= partials/quotes_slider.js
   //= partials/video.js
-  $('a[href*=\'#\']').mPageScroll2id();
 });
+
+  //= partials/top.js
+$('a[href*=\'#\']').mPageScroll2id();
