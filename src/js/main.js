@@ -8,4 +8,5 @@
 $(document).ready(function() {
   //= partials/menu.js
   //= partials/slider.js
+  //= partials/quotes_slider.js
 });
