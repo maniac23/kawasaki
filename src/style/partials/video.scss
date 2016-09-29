@@ -1,6 +1,10 @@
 .video {
-  padding: 40px $padding;
+  padding: 60px $padding;
   background-color: $secondary-color;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2127.38 2127.38'%3E%3Ctitle%3Etickets_bg_1%3C/title%3E%3Cpath d='M1861.67,1268.89l-592.78,592.78a129.11,129.11,0,0,1-182.39,0L265.71,1040.89a129.11,129.11,0,0,1,0-182.39L858.49,265.72a129.1,129.1,0,0,1,182.39,0l820.78,820.78A129.1,129.1,0,0,1,1861.67,1268.89ZM356.91,949.7l820.78,820.78,592.85-592.85L949.69,356.91ZM2089.66,630.51,1496.88,37.72a129.1,129.1,0,0,0-182.39,0L1132.09,220.12l91.2,91.2,182.39-182.39L1998.46,721.7,1816.07,904.1l91.2,91.2L2089.66,812.9A129.1,129.1,0,0,0,2089.66,630.51ZM904.09,1816.07,721.7,1998.47,128.92,1405.68l182.39-182.39-91.2-91.2L37.72,1314.49a129.11,129.11,0,0,0,0,182.39L630.5,2089.66a129.11,129.11,0,0,0,182.39,0l182.39-182.39Z' style='fill:%233ff;opacity:0.05'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
 
   &__title {
     margin: 0;
@@ -13,7 +17,7 @@
 
   &__bg {
     width: 100%;
-    min-height: 30vh;
+    min-height: 40vh;
     border: 5px solid $white;
     border-radius: 10px;
     background-image: url("../img/video.png");
@@ -38,5 +42,48 @@
     left: 50%;
     transform: translate(-50%, -50%);
     cursor: pointer;
+  }
+}
+
+// ******** MEDIA ****************
+@media only screen and (min-width: 992px) {
+  .video {
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    &__title {
+      position: absolute;
+      width: 30%;
+      font-size: 3.2rem;
+      left: 30%;
+      transform: translate(-50%);
+      top: 18%;
+      text-align: right;
+      background: $secondary-color;
+      z-index: 3;
+      line-height: 1.2;
+    }
+
+    &__bg {
+      width: 65%;
+      max-width: 680px;
+      min-height: 50vh;
+      float: right;
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .video {
+    padding-right: $padding * 2;
+
+    &__title {
+      top: 22%;
+    }
   }
 }
