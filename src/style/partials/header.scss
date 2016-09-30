@@ -151,16 +151,14 @@ $h: 2px;
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 1;
-
-  display: flex;
+  z-index: 2;
+  display: none;
   justify-content: center;
   align-items: center;
   width: 100vw;
   height: 100vh;
 
   background-color: rgba(37, 35, 58, 0.85);
-  opacity: 0;
   transition: all 0.5s ease-in-out;
 
   ul,
@@ -177,7 +175,7 @@ $h: 2px;
     a {
       display: block;
       padding: 20px 0;
-
+      margin-right: 10px;
       font-weight: 300;
       font-family: $roboto;
       color: $white;
@@ -195,11 +193,6 @@ $h: 2px;
       }
     }
   }
-}
-
-.main-menu.is-active {
-  opacity: 1;
-  z-index: 3;
 }
 
 // ********** MEDIA ***********

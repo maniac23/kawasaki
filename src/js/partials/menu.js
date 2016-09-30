@@ -1,14 +1,12 @@
-var button = document.querySelector('.menu-button');
-var menuButton = document.querySelector('.sandwich');
-var menu = document.querySelector('.main-menu');
-var links = menu.querySelectorAll('li a');
-function menuToggle() {
-  menuButton.classList.toggle('active');
-  menu.classList.toggle('is-active');
-}
+var button = $('.menu-button');
+var menuButton = $('.sandwich');
+var menu = $('.main-menu');
 
-button.addEventListener('click', menuToggle);
-
-for (var i = 0; i < links.length; i++) {
-  links[i].addEventListener('click', menuToggle);
-}
+$('.menu-button, .main-menu li a').click(function() {
+  menuButton.toggleClass('active');
+  if(menu.is(':visible')) {
+    menu.fadeOut(600);
+  } else {
+    menu.fadeIn(600).css('display', 'flex');
+	                                        }
+});
