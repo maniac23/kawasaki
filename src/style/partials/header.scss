@@ -147,7 +147,7 @@ $h: 2px;
   }
 }
 
-.main-menu {
+.mobile-menu {
   position: fixed;
   top: 0;
   right: 0;
@@ -193,6 +193,10 @@ $h: 2px;
       }
     }
   }
+}
+
+.main-menu {
+  display: none;
 }
 
 // ********** MEDIA ***********
@@ -254,9 +258,12 @@ $h: 2px;
     }
   }
 
+  .mobile-menu {
+    display: none;
+  }
+
   .main-menu {
     position: static;
-
     display: flex;
     flex: 0 0 60%;
     width: auto;
@@ -265,14 +272,40 @@ $h: 2px;
     background-color: transparent;
     opacity: 1;
 
+    ul,
+    li {
+      margin: 0;
+      padding: 0;
+
+      list-style-type: none;
+    }
+
     ul {
       display: flex;
       justify-content: space-between;
+      text-align: center;
 
       a {
-        display: initial;
+        display: block;
+        padding: 20px 0;
+        margin-right: 10px;
+        font-weight: 300;
+        font-family: $roboto;
+        color: $white;
+        text-transform: uppercase;
+        text-decoration: none;
+
+        transition: all 0.3s ease-in;
 
         font-size: 1rem;
+
+        &:hover,
+        &:active,
+        &:focus {
+          color: $brand-color;
+
+          outline: none;
+        }
       }
     }
   }
